@@ -151,6 +151,7 @@ set copyindent
 " time stamps
 cab datum <C-R>=strftime("%Y-%m-%d")<CR>
 cmap <F3> <C-R>=strftime("%Y-%m-%d")<CR>
+imap <F3> <C-R>=strftime("%Y-%m-%d")<CR>
 
 " Show tabs and white space
 set listchars=tab:▸\ ,trail:·
