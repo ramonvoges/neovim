@@ -132,6 +132,10 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Search without moving the cursor
+nnoremap <silent> * :execute "normal! *N"<cr>
+nnoremap <silent> # :execute "normal! #N"<cr>
+
 " Soft word wrap
 set wrap
 set lbr
@@ -181,6 +185,13 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline_theme='base16'
 " set termguicolors
 
+" Bookmarks
+nmap <Leader><Leader><Leader> <Plug>BookmarkToggle
+nmap <Leader>i <Plug>BookmarkAnnotate
+nmap <Leader>a <Plug>BookmarkShowAll
+nmap <Leader>j <Plug>BookmarkNext
+nmap <Leader>k <Plug>BookmarkPrev
+
 " Bufforgator
 let g:buffergator_viewport_split_policy = "B"
 
@@ -228,6 +239,14 @@ set background=dark
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 colorscheme hybrid
+
+if has("gui_vimr")
+  color hybrid
+  let g:hybrid_custom_term_colors = 0
+  let g:hybrid_reduced_contrast = 1
+  set background=dark
+endif
+
 
 " Ledger
 let g:ledger_maxwidth = 63        " Max width when folded
