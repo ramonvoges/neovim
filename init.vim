@@ -49,9 +49,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 " Obsession (restore nvim after restoring tmux)
 Plug 'tpope/vim-obsession'
-" Pandoc
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 " Pencil
 Plug 'reedes/vim-pencil'
 " Super-Tab
@@ -90,6 +87,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'ledger/vim-ledger'
 " Markdown
 Plug 'tpope/vim-markdown'
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
