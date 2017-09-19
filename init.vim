@@ -11,6 +11,8 @@ Plug 'mileszs/ack.vim'
 " Airline
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Ale
+Plug 'w0rp/ale'
 " Autopairs
 Plug 'jiangmiao/auto-pairs'
 " Bookmark
@@ -56,7 +58,7 @@ Plug 'ervandew/supertab'
 " Surround
 Plug 'tpope/vim-surround'
 "Syntastic
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 " Tabular
 Plug 'godlygeek/tabular'
 " Tagbar
@@ -287,14 +289,13 @@ let g:tagbar_expand = 1
 nmap <F8> :TagbarToggle<CR>
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 " Trailing Whitespace
 let g:extra_whitespace_ignored_filetypes = ['calendar'] " Not in Calendar
