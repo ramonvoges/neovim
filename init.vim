@@ -192,6 +192,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline_theme='base16'
 " set termguicolors
 
+" Ale
+let g:ale_sign_column_always = 1 " keeps the gutter open
+
 " Bookmarks
 nmap <Leader><Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>i <Plug>BookmarkAnnotate
