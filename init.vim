@@ -21,6 +21,8 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'jeetsukumaran/vim-buffergator'
 " Calendar
 Plug 'mattn/calendar-vim'
+" Color Themes
+Plug 'flazz/vim-colorschemes'
 " CTRL-P
 Plug 'kien/ctrlp.vim'
 " Deoplete (autocompletion)
@@ -53,12 +55,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-obsession'
 " Pencil
 Plug 'reedes/vim-pencil'
+" Presenting
+Plug 'sotte/presenting.vim'
 " Super-Tab
 Plug 'ervandew/supertab'
 " Surround
 Plug 'tpope/vim-surround'
 "Syntastic
-" Plug 'scrooloose/syntastic'
+" Plug 'scroolooso/syntastic'
 " Tabular
 Plug 'godlygeek/tabular'
 " Tagbar
@@ -97,6 +101,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 't9md/vim-ruby-xmpfilter'
+Plug 'thoughtbot/vim-rspec'
 
 " On-demand loading
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -284,6 +289,16 @@ map <leader>n :NERDTreeToggle<cr>
 " let g:airline_section_x = '%{PencilMode()}'
 let g:pencil#map#suspend_af = 'K'
 
+" Presenting
+au FileType pandoc let s:presenting_slide_separator = '\v(^|\n)\ze#+'
+
+" RSpec
+map <Leader>rc :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
+let g:rspec_command = "!rspec -fd {spec}" " --format documentation
+
 " Tagbar
 let g:tagbar_expand = 1
 nmap <F8> :TagbarToggle<CR>
@@ -293,6 +308,7 @@ nmap <F8> :TagbarToggle<CR>
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 " let g:syntastic_always_populate_loc_list = 1
+" " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
