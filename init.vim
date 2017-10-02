@@ -300,7 +300,7 @@ map <Leader>rc :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
-let g:rspec_command = "!rspec -fd {spec}" " --format documentation
+" let g:rspec_command = "!rspec -fd {spec}" " --format documentation
 
 " Tagbar
 let g:tagbar_expand = 1
