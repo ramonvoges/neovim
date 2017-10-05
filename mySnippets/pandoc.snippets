@@ -1,0 +1,26 @@
+extends markdown
+
+snippet front "Front Matter for Pandoc"
+---
+author: ${1: Ramon Voges}
+date: ${2:`!v strftime("%Y-%m-%d")`}
+title: $3
+bibliography: ${4:/Users/ramon/Documents/Literatur/Arbeit.bib}
+csl: ${5:foerster-geisteswissenschaften.csl}
+---
+
+$0
+endsnippet
+
+snippet fr "Front Matter for Jekyll"
+---
+date: ${2:`!v strftime("%Y-%m-%d")`}
+title: $3
+categories:
+  - $4
+tags:
+  - $5
+---
+
+$0
+endsnippet
