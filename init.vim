@@ -45,6 +45,8 @@ Plug 'sjl/gundo.vim'
 Plug 'w0ng/vim-hybrid'
 " Latex
 Plug 'lervag/vimtex'
+" Mac Dictionary
+Plug 'jonhiggs/macdict.vim'
 " Multiple Cursors
 Plug 'terryma/vim-multiple-cursors'
 " NERDCommenter
@@ -271,6 +273,11 @@ au FileType ledger vnoremap <silent> <Tab> :LedgerAlign<CR>
 " Tabstops und Shiftwidth betragen 4 Leerzeichen
 autocmd FileType ledger setlocal ts=4
 autocmd FileType ledger setlocal sw=4
+
+
+" MacDict – Look up word under cursor in Dictionary.app
+map <silent> <leader>d "dyiw:call MacDict(@d)<CR>
+
 
 " NERDCommenter
 " Add spaces after comment delimiters by default
