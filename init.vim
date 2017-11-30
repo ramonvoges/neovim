@@ -193,6 +193,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline_theme='base16'
 " set termguicolors
+let g:airline#extensions#wordcount#filetypes = '\vmarkdown|rst|org|help|text|tex|mail|pandoc|vimwiki'
 
 " Ale
 let g:ale_sign_column_always = 1 " keeps the gutter open
