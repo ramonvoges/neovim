@@ -98,6 +98,8 @@ Plug 'tpope/vim-markdown'
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+" Python
+Plug 'klen/python-mode'
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -184,7 +186,7 @@ endif
 
 " Airline
 let g:airline_powerline_fonts = 1
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+" set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#bufferline#enabled = 1
 "let g:airline#extensions#tabline#show_buffers = 1
@@ -215,6 +217,7 @@ let g:calendar_monday = 1
 " CTRL-P
 " MRU and Files
 map <C-P> :CtrlPMixed<cr>
+map <C-M> :CtrlPMRUFiles<cr>
 " Opens buffer list
 map <C-B> :CtrlPBuffer<cr>
 
@@ -302,6 +305,10 @@ let g:pencil#map#suspend_af = 'K'
 
 " Presenting
 au FileType pandoc let s:presenting_slide_separator = '\v(^|\n)\ze#+'
+
+" Python
+let g:pymode_python = 'python3'
+" let g:pymode_rope_complete_on_dot = 0
 
 " RSpec
 map <Leader>rc :call RunCurrentSpecFile()<CR>
