@@ -47,6 +47,8 @@ Plug 'w0ng/vim-hybrid'
 Plug 'lervag/vimtex'
 " Mac Dictionary
 Plug 'jonhiggs/macdict.vim'
+" Material theme
+Plug 'jdkanani/vim-material-theme'
 " Multiple Cursors
 Plug 'terryma/vim-multiple-cursors'
 " NERDCommenter
@@ -99,7 +101,7 @@ Plug 'tpope/vim-markdown'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 " Python
-Plug 'klen/python-mode'
+Plug 'python-mode/python-mode', {'branch': 'develop'}
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -193,7 +195,8 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#buffer_min_count = 0
 " Zeigt nur den Dateiname
 let g:airline#extensions#tabline#fnamemod = ':t'
-"let g:airline_theme='base16'
+" let g:airline_theme='base16'
+let g:airline_theme='hybrid'
 " set termguicolors
 let g:airline#extensions#wordcount#filetypes = '\vmarkdown|rst|org|help|text|tex|mail|pandoc|vimwiki'
 
@@ -252,9 +255,11 @@ nmap <leader>gp :Gpush origin master<cr>
 
 " Hybrid Color Theme
 set background=dark
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme hybrid
+" let g:hybrid_custom_term_colors = 1
+" let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+" colorscheme hybrid
+set termguicolors
+colorscheme material-theme
 
 if has("gui_vimr")
   color hybrid
