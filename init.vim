@@ -61,6 +61,8 @@ Plug 'tpope/vim-obsession'
 Plug 'reedes/vim-pencil'
 " Presenting
 Plug 'sotte/presenting.vim'
+" Repeat
+Plug 'tpope/vim-repeat'
 " Super-Tab
 Plug 'ervandew/supertab'
 " Surround
