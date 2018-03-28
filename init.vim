@@ -27,6 +27,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'kien/ctrlp.vim'
 " Deoplete (autocompletion)
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 " Ditto
 Plug 'dbmrq/vim-ditto'
 " Easy motion
@@ -43,6 +44,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'sjl/gundo.vim'
 " Hybrid
 Plug 'w0ng/vim-hybrid'
+" Iron
+Plug 'BurningEther/iron.nvim'
 " Latex
 Plug 'lervag/vimtex'
 " Mac Dictionary
@@ -264,10 +267,13 @@ set termguicolors
 colorscheme material-theme
 
 if has("gui_vimr")
-  color hybrid
-  let g:hybrid_custom_term_colors = 0
-  let g:hybrid_reduced_contrast = 1
+  " color hybrid
+  " let g:hybrid_custom_term_colors = 0
+  " let g:hybrid_reduced_contrast = 1
+  " set background=dark
   set background=dark
+  set termguicolors
+  colorscheme material-theme
 endif
 
 
@@ -315,7 +321,9 @@ au FileType pandoc let s:presenting_slide_separator = '\v(^|\n)\ze#+'
 
 " Python
 let g:pymode_python = 'python3'
-" let g:pymode_rope_complete_on_dot = 0
+let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
+let g:pymode_rope_completion = 1
+" let g:pymode_rope_complete_on_dot = 1
 
 " RSpec
 map <Leader>rc :call RunCurrentSpecFile()<CR>
