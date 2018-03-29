@@ -321,9 +321,12 @@ au FileType pandoc let s:presenting_slide_separator = '\v(^|\n)\ze#+'
 
 " Python
 let g:pymode_python = 'python3'
-let g:python3_host_prog = '/full/path/to/neovim3/bin/python'
-let g:pymode_rope_completion = 1
+let g:python3_host_prog = '/Users/ramon/.virtualenvs/neovim/bin/python'
+let g:pymode_rope_completion = 0
 " let g:pymode_rope_complete_on_dot = 1
+" let g:deoplete#sources#jedi#python_path = '/Users/ramon/.virtualenvs/neovim/bin/python'
+let g:deoplete#sources#jedi#server_timeout = 25 " Falls es Fehlermeldungen von jedi gibt, weiter hochsetzen!
+let g:deoplete#sources#jedi#show_docstring = 1
 
 " RSpec
 map <Leader>rc :call RunCurrentSpecFile()<CR>
@@ -376,8 +379,11 @@ let g:vimtex_compiler_latexmk = {
 \   '-file-line-error',
 \   '-synctex=1',
 \   '-interaction=nonstopmode',
+\   '-lualatex',
 \ ],
 \}
+let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_view_method = 'skim'
 
 
 " Vimwiki
